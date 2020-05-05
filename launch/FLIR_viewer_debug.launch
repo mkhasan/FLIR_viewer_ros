@@ -1,0 +1,4 @@
+<launch>
+	<rosparam file="$(find client_interface)/config/configuration.yaml" command="load"/>
+    <node name="FLIR_viewer_node" pkg="FLIR_viewer" type="FLIR_viewer_node" launch-prefix="xterm -e gdb --args" output="screen" />
+</launch>
